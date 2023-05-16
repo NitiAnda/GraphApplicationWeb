@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Graph</title>
+</head>
+
+<body>
+
+    <div id="buttons-container">
+        <button id="view-nodes-edges-button" class="btn">View Nodes and Edges</button>
+        <button id="add-node-button" class="btn">Add Node</button>
+        <button id="update-node-button" class="btn">Update Node</button>
+        <button id="remove-node-button" class="btn">Remove Node</button>
+        <button id="add-edge-button" class="btn">Add Edge</button>
+        <button id="update-edge-button" class="btn">Update Edge</button>
+        <button id="remove-edge-button" class="btn">Remove Edge</button>
+    </div>
+
+    <div id="input-container">
+        <div id="add-node-input-container" class="input-box">
+            <div class="input-row">
+                <label for="a-node-id">Id</label>
+                <input id="a-node-id" type="text" placeholder="Node id.." />
+            </div>
+            <div class="input-row">
+                <label for="a-node-key">Key</label>
+                <input id="a-node-key" type="text" placeholder="Node key.." /> 
+            </div>
+            <button id="a-node-button" class="action-btn">Add</button>
+        </div>
+        <div id="update-node-input-container" class="input-box">
+            <div class="input-row">
+                <label for="u-node-id">Id</label>
+                <input id="u-node-id" type="text" placeholder="Node id.." />
+            </div>
+            <div class="input-row">
+                <label for="u-node-key">Key</label>
+                <input id="u-node-key" type="text" placeholder="Node key.." />
+            </div>
+            <button id="u-node-button" class="action-btn">Update</button>
+        </div>
+        <div id="delete-node-input-container" class="input-box">
+            <div class="input-row">
+                <label for="d-node-id">Id</label>
+                <input id="d-node-id" type="text" placeholder="Node id.." />
+            </div>
+            <button id="d-node-button" class="action-btn">Delete</button>
+        </div>
+        <div id="add-edge-input-container" class="input-box">
+            <div class="input-row">
+                <label for="a-edge-id">Id</label>
+                <input id="a-edge-id" type="text" placeholder="Edge id.." />
+            </div>
+            <div class="input-row">
+                <label for="a-edge-from">From</label>
+            <input id="a-edge-from" type="text" placeholder="From node.." />
+            </div>
+            <div class="input-row">
+                <label for="a-edge-to">To</label>
+                <input id="a-edge-to" type="text" placeholder="To node.." />
+            </div>
+            <div class="input-row">
+                <label for="a-edge-value">Value</label>
+                <input id="a-edge-value" type="text" placeholder="Edge value.." />
+            </div>
+            <button id="a-edge-button" class="action-btn">Add</button>
+        </div>
+        <div id="update-edge-input-container" class="input-box">
+            <div class="input-row">
+                <label for="u-edge-id">Id</label>
+                <input id="u-edge-id" type="text" placeholder="Edge id.." />
+            </div>
+            <div class="input-row">
+                <label for="u-edge-value">Value</label>
+                <input id="u-edge-value" type="text" placeholder="Edge value.." />
+            </div>
+            <button id="u-edge-button" class="action-btn">Update</button>
+        </div>
+        <div id="delete-edge-input-container" class="input-box">
+            <div class="input-row">
+                <label for="d-edge-id">Id</label>
+                <input id="d-edge-id" type="text" placeholder="Edge id.." />
+            </div>
+            <button id="d-edge-button" class="action-btn">Delete</button>
+        </div>
+    </div>
+
+    <div id="graph-container">
+
+    </div>
+
+    <div id="view-info-container">
+        <div class="info-box">Nodes: <div id="info-nodes"></div></div>
+        <div class="info-box">Edges: <div id="info-edges"></div></div>
+        <button id="close-info"><i class="fa-regular fa-rectangle-xmark"></i></button>
+    </div>
+
+    <div class="unsuccessfully-message-notification"></div>
+    <div class="successfully-message-notification"></div>
+    <div class="warning-message-notification"></div>
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
